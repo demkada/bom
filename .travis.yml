@@ -28,5 +28,5 @@ jdk:
 script: mvn clean install
 
 after_success:
-  - ./cd/before-deploy.sh
-  - ./cd/deploy.sh
+  - cd/before-deploy.sh
+  - cd/deploy.sh
