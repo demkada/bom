@@ -16,12 +16,10 @@ env:
 addons:
   apt:
     packages:
-    - oracle-java8-installer
-
+      - oracle-java8-installer
 cache:
   directories:
     - $HOME/.m2
-
 jdk:
   - oraclejdk8
 
@@ -29,3 +27,13 @@ script: mvn clean install
 
 after_success:
   - ./cd/deploy.sh
+
+deploy:
+  provider: releases
+  api_key:
+    secure: a8cJeTloPsM8IZuEkPW6wCP90LU7zSqih/DWCLxok4+ShhN3kp+M0We+CBY88vLjEXQxzCQts1kpO3HyLHV+DuwIYALil/HFYz3eWgS1iqlgVwH/CvQXXS375gTQWkn9e+7GDox/mEgK/S+wesX6V7L1LoyJoB4DDzcsgH6LfsFxp3iQX+Fvjce9AbSIYDMgd0SyM+ATwUT2fGBqvdiLpti0Qy4h5jEZT/iqJOxf0obiW5cjAPIi8B3IdhCZKpJJiwGgNYQxCas6Lq72yUQT67GoT0hf0qJjsrZ3HpdMqzdKjcDm+PwYj/VolnK/vXEHN/vdEvTpZV2sAY03rEbZdOzE652iNOW0Ai7yU0OhV2yRo8iCgpxFOBMbm+v2HDilwr0i5DPYbYE6Ud964S35wEMnC9LGiyPYTU80Or39QyMPJl+TUCMp6yFssJCfETmeBvfh7lZbKgOXxcHH52vhrgCo2xLUYZFcLHcsdDh1Vxb4JX0CDFBRI0+Mk05a8uXx+VqR90eR5ES3Y7RTauUiYe+YsXY8vTNR2ekdzgP8769PtXQFZW6ZtguKE9Z1MGn5k+03RNHBi+S2d3rqWkFd4ZUccOVO7sS1JpVNnm6mcNabl7vfbb7phiKO9VHVj7vRRkzrVyunfsafzTnTbuYE1I26vz/iW9RDPwVLnolA0Kg=
+  file_glob: true
+    file: "pom.xml"
+  skip_cleanup: true
+    on:
+      tags: true
