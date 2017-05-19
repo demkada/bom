@@ -8,6 +8,14 @@
     <packaging>pom</packaging>
     <name>Olympus</name>
 
+    <description>
+        Th parent project for demkada.io oss
+    </description>
+
+    <url>
+        https://github.com/demkada/olympus
+    </url>
+
     <properties>
         <!-- Build Encoding -->
         <build.encoding>UTF-8</build.encoding>
