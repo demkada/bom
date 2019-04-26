@@ -2,18 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.demkada.olympus</groupId>
-    <artifactId>olympus-parent</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <groupId>com.demkada</groupId>
+    <artifactId>bom</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Olympus</name>
+    <name>BOM</name>
 
     <description>
-        Th parent project for demkada.io oss
+        Th parent project for demkada.com oss
     </description>
 
     <url>
-        https://github.com/demkada/olympus
+        https://github.com/demkada/bom
     </url>
 
     <properties>
@@ -26,7 +26,7 @@
 
     <organization>
         <name>DEMKADA</name>
-        <url>http://demkada.io</url>
+        <url>http://opensource.demkada.com</url>
     </organization>
 
     <prerequisites>
@@ -35,7 +35,7 @@
 
     <developers>
         <developer>
-            <email>kadary@demkada.com</email>
+            <email>kad@demkada.com</email>
             <name>Kad D.</name>
             <url>https://github.com/kadary</url>
             <id>kadary</id>
@@ -43,19 +43,19 @@
     </developers>
 
     <scm>
-        <url>https://github.com/demkada/olympus</url>
-        <connection>scm:git:https://github.com/demkada/olympus.git</connection>
-        <developerConnection>scm:git:https://github.com/demkada/olympus.git</developerConnection>
+        <url>https://github.com/demkada/bom</url>
+        <connection>scm:git:https://github.com/demkada/bom.git</connection>
+        <developerConnection>scm:git:https://github.com/demkada/bom.git</developerConnection>
     </scm>
 
     <issueManagement>
         <system>GitHub Issues</system>
-        <url>https://github.com/demkada/olympus/issues</url>
+        <url>https://github.com/demkada/bom/issues</url>
     </issueManagement>
 
     <ciManagement>
         <system>Travis</system>
-        <url>https://travis-ci.org/demkada/olympus</url>
+        <url>https://travis-ci.org/demkada/bom</url>
     </ciManagement>
 
     <licenses>
