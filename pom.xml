@@ -4,7 +4,7 @@
 
     <groupId>com.demkada</groupId>
     <artifactId>bom</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>pom</packaging>
     <name>BOM</name>
 
@@ -253,6 +253,32 @@
                     </plugin>
                 </plugins>
             </build>
+        </profile>
+        <profile>
+            <repositories>
+                <repository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>bintray-demkada-maven</id>
+                    <name>bintray</name>
+                    <url>https://dl.bintray.com/demkada/maven</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>bintray-demkada-maven</id>
+                    <name>bintray-plugins</name>
+                    <url>https://dl.bintray.com/demkada/maven</url>
+                </pluginRepository>
+            </pluginRepositories>
+            <id>bintray</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
         </profile>
     </profiles>
 </project>
